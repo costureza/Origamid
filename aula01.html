@@ -1,21 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Origamid - TAG</title>
   <link rel="stylesheet" href="./CSS/style.css">
 </head>
+
 <body>
-  <h1>Cursos Online de HTML e CSS</h1>
-  <h2>Tags Iniciais</h2>
-  <ul>
-    <li><code>p</code>: Marca um parágrafo. </li>
-    <li><code>h1, h2, h3, h4, h5, h6</code>: Marcam diferentes níveis de títulos</li>
-    <li><code>a href=""</code>: Marca um link.</li>
-  </ul>
+  <main>
+    <header>
+      <h1>Cursos Online de HTML e CSS</h1>
+    </header>
+    <section>
+      <h2>Tags Iniciais</h2>
+      <ul>
+        <li><code>p</code>: Marca um parágrafo. </li>
+        <li><code>h1, h2, h3, h4, h5, h6</code>: Marcam diferentes níveis de títulos</li>
+        <li><code>a href=""</code>: Marca um link.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Keyboard Shortcuts</h2>
+      <ul>
+        <li>Copia(seleção ou linha): <code>Ctrl+C</code></li>
+        <li>Recorta: <code>Ctrl+X</code></li>
+        <li>Cola: <code>Ctrl+V</code></li>
+        <li>Desfaz: <code>Ctrl+Z</code></li>
+        <li>Refaz: <code>Ctrl+Shift+Z</code></li>
+        <li>Move a Linha: <code>Alt+↑</code> ou <code>Alt+↓</code></li>
+        <li>Seleciona o próximo parecido: <code>Ctrl+D</code></li>
+        <li>Comenta o código: <code>Ctrl+/</code></li>
+        <li>Esconde a Side Bar: <code>Ctrl+B</code></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Link Caminhos</h2>
+      <h3>Caminho (path)</h3>
+      <ul>
+        <li>
+          <h4>Absoluto:</h4>
+          <ul>
+            <li>Usado para arquivos externos ao nosso site:
+              <code><</code><code>a href</code><code>="</code><code>https://www.origamid.com/cursos/</code><code>"</code><code>></code>
+              <code><</code><code>/</code><code>a</code><code>></code><br>
+            </li>
+          </ul>
+        </li>
+        <a href="https://www.origamid.com/cursos/">Origamid Cursos</a>
+        <li>
+          <h4>Relativo</h4>
+        </li>
+        <ul>
+          <li> Usado para arquivos internos do site.
+            <code><</code><code>a href</code>
+            <code>="</code>
+            <code>/produtos/bicicletas.html</code><code>"</code><code>></code><code><</code><code>/</code><code>a</code><code>></code><br>
+          </li>
+        </ul>
+
+        <a href="/produtos/bicicletas.html">Bicicletas</a>
+        <ul>
+          <li><code>/index.html</code>:Arquivo index.html no diretório raiz /. </li>
+          <li><code>/produtos/bicicletas.html</code>: Arquivo bicicletas.html no diretório /produtos localizado na raiz.
+          </li>
+          <li><code>index.html ou ./index.html</code>: Arquivo index.html no diretório atual ./.</li>
+          <li><code>../index.html</code>: Arquivo index.html um diretório anterior ao atual ../.</li>
+          <li><code>../../index.html</code>: Arquivo index.html dois diretórios anteriores ao atual.</li>
+        </ul>
+      </ul>
+    </section>
+    <section>
+      <h1>CSS Básico</h1>
+      <div>
+        <h2>Link</h2>
+        <ul>
+          <li><b>link: </b>
+            Cria uma relação entre um documento HTML e um arquivo de estilo CSS.</li>
+          <li><b>rel: </b>Define o tipo de arquivo (stylesheet para CSS). É possível linkar outros também como favicons.
+          </li>
+          <li><b>href: </b>Define o caminho do arquivo.</li>
+        </ul>
+        <code><</code><code>link </code><code>rel="</code><code>stylesheet"</code><code>href="/style.css"/></code>
+      </div>
+      <div>
+        <h2>CSS Anatomia</h2>
+        <ul>
+          <li><b>Seletor: </b>Seleciona o elemento(s) que deve ser estilizado.</li>
+          <li><b>Bloco CSS: </b> Engloba as propriedades <code>{}</code> que serão aplicadas ao seletor.</li>
+          <li><b>Propriedade: </b>Define o que será alterador.</li>
+          <li><b>Valor: </b>Define o valor do novo estilo.</li>
+        </ul>
+        <div class="cssexemplo">
+          <code>
+            a<b>(seletor)</b>{<br>
+              color<b>(propriedade)</b>:black; <br>
+              text-decoration: none <b>(valor)</b>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div>
+        <h3>Cascading</h3>
+        <p>Os estilos são aplicados em "cascata", um acima do outro. A ordem e especificidade do seletor importam no
+          CSS.</p>
+      </div>
+      <div>
+        <div>
+          <h3>Seletores</h3>
+          <ul>
+            <li><b>h1, p: </b>A vírgula permite selecionarmos múltiplos elementos para a aplicação de um mesmo estilo.
+            </li>
+            <div class="cssexemplo">
+              <code>
+              h1,
+              p{<br>
+                color:blue; <br>
+              } <br>
+              
+            </code>
+            </div>
+            <li><b>p a: </b> Seleciona o <code>a</code> que tiver um <code>p</code> como elemento pai (não precisa ser
+              filho direto).</li>
+              <div class="cssexemplo">
+                <code>
+                  p a{<br>
+                    color: green;
+                  } 
+                </code>
+              </div>
+          </ul>
+          <div>
+            <h5>id</h5>
+            <p>Atributo HTML que adiciona um identificador único na tag. Esse identificar pode ser utilizado no CSS para selecionarmos o elemento: #nomeid</p>
+                          <div class="cssexemplo">
+                <code>
+                  #logo{<br>
+                    color: green;
+                  } 
+                </code>
+              </div>
+          </div>
+          <div>
+            <h5>class</h5>
+            <p>tributo HTML que adiciona um identificador reutilizável na tag. Esse identificar pode ser utilizado no CSS para selecionarmos o(s) elemento(s): .classe</p>
+            <img src="./IMG/ex01.png" alt="">
+            <img src="./IMG/ex02.png" alt="">
+
+          </div>
+
+        </div>
 
 
-  
+
+
+    </section>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>

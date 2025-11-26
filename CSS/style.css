@@ -1,0 +1,15 @@
+code{
+  color: rgb(5, 73, 201);
+}
+.cssexemplo{
+  border: .1rem solid crimson;
+  width: 15rem;
+  height: 5rem;
+  margin: .5rem;
+  padding: .5rem;
+  display: flex;
+  align-items: center; 
+}
+.cssexemplo b{
+  color: crimson;
+}
