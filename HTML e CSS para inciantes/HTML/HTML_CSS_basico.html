@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origamid - HTML e CSS para inciantes</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Cursos Online de HTML e CSS</h1>
+    </header>
+    <section>
+      <h2>Tags Iniciais</h2>
+      <ul>
+        <li><code>p</code>: Marca um parágrafo. </li>
+        <li><code>h1, h2, h3, h4, h5, h6</code>: Marcam diferentes níveis de títulos</li>
+        <li><code>a href=""</code>: Marca um link.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Keyboard Shortcuts</h2>
+      <ul>
+        <li>Copia(seleção ou linha): <code>Ctrl+C</code></li>
+        <li>Recorta: <code>Ctrl+X</code></li>
+        <li>Cola: <code>Ctrl+V</code></li>
+        <li>Desfaz: <code>Ctrl+Z</code></li>
+        <li>Refaz: <code>Ctrl+Shift+Z</code></li>
+        <li>Move a Linha: <code>Alt+↑</code> ou <code>Alt+↓</code></li>
+        <li>Seleciona o próximo parecido: <code>Ctrl+D</code></li>
+        <li>Comenta o código: <code>Ctrl+/</code></li>
+        <li>Esconde a Side Bar: <code>Ctrl+B</code></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Link Caminhos</h2>
+      <h3>Caminho (path)</h3>
+      <ul>
+        <li>
+          <h4>Absoluto:</h4>
+          <ul>
+            <li>Usado para arquivos externos ao nosso site:
+              <code><</code><code>a href</code><code>="</code><code>https://www.origamid.com/cursos/</code><code>"</code><code>></code>
+              <code><</code><code>/</code><code>a</code><code>></code><br>
+            </li>
+          </ul>
+        </li>
+        <a href="https://www.origamid.com/cursos/">Origamid Cursos</a>
+        <li>
+          <h4>Relativo</h4>
+        </li>
+        <ul>
+          <li> Usado para arquivos internos do site.
+            <code><</code><code>a href</code>
+            <code>="</code>
+            <code>/produtos/bicicletas.html</code><code>"</code><code>></code><code><</code><code>/</code><code>a</code><code>></code><br>
+          </li>
+        </ul>
+
+        <a href="/produtos/bicicletas.html">Bicicletas</a>
+        <ul>
+          <li><code>/index.html</code>:Arquivo index.html no diretório raiz /. </li>
+          <li><code>/produtos/bicicletas.html</code>: Arquivo bicicletas.html no diretório /produtos localizado na raiz.
+          </li>
+          <li><code>index.html ou ./index.html</code>: Arquivo index.html no diretório atual ./.</li>
+          <li><code>../index.html</code>: Arquivo index.html um diretório anterior ao atual ../.</li>
+          <li><code>../../index.html</code>: Arquivo index.html dois diretórios anteriores ao atual.</li>
+        </ul>
+      </ul>
+    </section>
+    <section>
+      <h1>CSS Básico</h1>
+      <div>
+        <h2>Link</h2>
+        <ul>
+          <li><b>link: </b>
+            Cria uma relação entre um documento HTML e um arquivo de estilo CSS.</li>
+          <li><b>rel: </b>Define o tipo de arquivo (stylesheet para CSS). É possível linkar outros também como favicons.
+          </li>
+          <li><b>href: </b>Define o caminho do arquivo.</li>
+        </ul>
+        <code><</code><code>link </code><code>rel="</code><code>stylesheet"</code><code>href="/style.css"/></code>
+      </div>
+      <div>
+        <h2>CSS Anatomia</h2>
+        <ul>
+          <li><b>Seletor: </b>Seleciona o elemento(s) que deve ser estilizado.</li>
+          <li><b>Bloco CSS: </b> Engloba as propriedades <code>{}</code> que serão aplicadas ao seletor.</li>
+          <li><b>Propriedade: </b>Define o que será alterador.</li>
+          <li><b>Valor: </b>Define o valor do novo estilo.</li>
+        </ul>
+        <div class="cssexemplo">
+          <code>
+            a<b>(seletor)</b>{<br>
+              color<b>(propriedade)</b>:black; <br>
+              text-decoration: none <b>(valor)</b>;<br>
+            }
+          </code>
+        </div>
+      </div>
+      <div>
+        <h3>Cascading</h3>
+        <p>Os estilos são aplicados em "cascata", um acima do outro. A ordem e especificidade do seletor importam no
+          CSS.</p>
+      </div>
+      <div>
+        <div>
+          <h3>Seletores</h3>
+          <ul>
+            <li><b>h1, p: </b>A vírgula permite selecionarmos múltiplos elementos para a aplicação de um mesmo estilo.
+            </li>
+            <div class="cssexemplo">
+              <code>
+              h1,
+              p{<br>
+                color:blue; <br>
+              } <br>
+              
+            </code>
+            </div>
+            <li><b>p a: </b> Seleciona o <code>a</code> que tiver um <code>p</code> como elemento pai (não precisa ser
+              filho direto).</li>
+            <div class="cssexemplo">
+              <code>
+                  p a{<br>
+                    color: green;
+                  } 
+                </code>
+            </div>
+          </ul>
+          <h1>Bicicletas</h1>
+          <p>As melhores <a href="/">bicicletas.</a></p>
+          <a href="/">Veja Todas</a>
+          <div>
+            <h5>id</h5>
+            <p>Atributo HTML que adiciona um identificador único na tag. Esse identificar pode ser utilizado no CSS para
+              selecionarmos o elemento: #nomeid</p>
+            <h1 id="logo">Bikcraft</h1>
+            <div class="cssexemplo">
+              <code>
+                  #logo{<br>
+                    color: gold;<br>
+                  } 
+                </code>
+            </div>
+          </div>
+          <div>
+            <h5>class</h5>
+            <p>tributo HTML que adiciona um identificador reutilizável na tag. Esse identificar pode ser utilizado no
+              CSS para selecionarmos o(s) elemento(s): .classe</p>
+            <img src="../IMG/ex01.png" alt="">
+            <img src="../IMG/ex02.png" alt="">
+            <h1>Cursos</h1>
+            <h2 class="codigo">HTML para Iniciantes</h2>
+            <h2 class="codigo">CSS para Iniciantes</h2>
+            <h2 class="codigo underline">JavaScript para Iniciantes</h2>
+            <h2 class="design">UX Design</h2>
+            <h2 class="design">UI Design</h2>
+          </div>
+        </div>
+    </section>
+    <section>
+      <h1>Background e Cores</h1>
+      <div>
+        <ul>
+          <li><b>background ou background-color</b>:Muda a cor de fundo do elemento. </li>
+          <img src="../IMG/ex03.svg" alt="">
+
+          <li><b>hexadecimal</b>: A cor é representada através de um código de 6 caracteres que vão de 0 até F. Ex: #84e
+            = #8844ee </li>
+          <img src="../IMG/ex04.svg" alt="">
+          <li><b>rgba</b>:O rgba é uma função que recebe os valores de r (red), g (green), b (blue) e a (alpha). O rgb
+            vai de 0 até 255 e o alpha vai de 0 até 1. </li>
+          <img src="../IMG/ex05.svg" alt="">
+          <li><b>plugin</b>: color-highlight <a
+              href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight ">Plugin color-highlight
+            </a>
+          </li>
+          <div class="cssexemplo">
+            <code>
+              "color-highlight.markerType": "dot-before",<br>"editor.colorDecorators": false
+            </code>
+          </div>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>Box Model</h1>
+      <h2>Caixas</h2>
+      <p>Uma interface web é composta de diversas caixas que organizam o conteúdo.</p>
+      <img src="../IMG/caixas.jpg" alt="">
+      <div>
+        <h3>Box Model</h3>
+        <ul>
+          <li>Content (conteúdo):Define a largura inicial da caixa (salvo elementos de bloco).</li>
+
+          <li>Padding (preenchimento):Separa o conteúdo das bordas da caixa. É a margem interna.</li>
+
+          <li>Border (borda): Define bordas para a caixa.</li>
+
+          <li>Margin (margem):Define a distância entre uma caixa e outra.</li>
+
+          <li>Width (largura):A largura total da caixa, por padrão é o somatório do conteúdo + padding (left/right) +
+            border (left/right).</li>
+
+          <li>Height (altura): A altura total da caixa, por padrão é o somatório do conteúdo + padding (top/bottom) +
+            border (top/bottom).</li>
+        </ul>
+        <img src="../IMG/box-model.png" alt="">
+      </div>
+      <div>
+        <h3>Pixel</h3>
+        <ul>
+          <li>Unidade de referência:É a unidade de referência da Web, pois as telas são desenvolvidas em pixels.</li>
+
+          <li>Monitores: Um monitor de: 3840 (largura em px) x 2160 (altura em px) = 8.294.400.</li>
+
+          <li>
+            px em CSS: No CSS o pixel (px) é uma unidade de referência e não representa 1 pixel exato do seu dispositivo
+            (é adaptável em relação à densidade da tela).
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>div</h3>
+        <p>A <code><</code> <code>div></code> é um elemento de bloco block genérico que serve para auxiliar no
+          posicionamento dos elementos/conteúdo na tela.Existem também elementos semânticos como main, section, nav e
+          outros que veremos em outras aulas.</p>
+        <img src="../IMG/ex06.svg" alt="">
+      </div>
+    </section>
+    <section>
+      <h1>Estilos do Browser</h1>
+      <ul>
+        <li><b>Padrão:</b>Os browsers possuem um css inicial que é aplicado ao documento.</li>
+        <li><b>h1 vs p:</b>Por isso quando marcamos um h1 o texto fica maior/negrito em relação a um texto marcado com
+          um p.</li>
+      </ul>
+      <img src="../IMG/browser.png" alt="">
+      <div>
+        <h2>Reset, Reboot e Normalize</h2>
+        <p>
+          Algumas soluções foram criadas para lidar com os estilos iniciais. O principal objetivo delas é reduzir a
+          inconsistência entre os browsers.
+        </p>
+        <ul>
+          <li><b>Reset:</b> Remove parte dos estilos iniciais</li>
+          <a href="https://meyerweb.com/eric/tools/css/reset/">meyerweb.com</a>
+
+          <li><b>Normalize:</b> Normaliza os estilos iniciais entre os browsers sem remover os mesmos.</li>
+          <a href="https://necolas.github.io/normalize.css/">Normalize.css</a>
+
+          <li><b>Reboot:</b> É uma mistura de reset e normalize utilizada pelo Bootstrap.</li>
+          <a href="https://raw.githubusercontent.com/twbs/bootstrap/main/dist/css/bootstrap-reboot.css"> Bootstrap
+            Reboot</a>
+        </ul>
+      </div>
+      <div>
+        <h2>inherit (herança)</h2>
+        <p>Existem propriedades do CSS que são passadas do pai para o filho como uma herança (inherit).</p>
+        <p>Exemplos: color, font-size, font-family e outras.</p>
+        <h3>Padrão vs Herança</h3>
+        <p>O valor padrão irá escrever por cima da herança. Por isso ao definirmos uma color no body, os
+          <code><</code><code>a></code> não mudam de cor.
+        </p>
+        <img src="../IMG/ex07.svg" alt="">
+      </div>
+    </section>
+    <section>
+      <h1>Display</h1>
+      <h2>Fluxo do Layout</h2>
+
+      <p>O fluxo do layout no HTML ocorre conforme o modo de escrita definido. Por padrão, de cima para baixo da
+        esquerda para a direita.</p>
+
+      <p><b>span: </b>Tag genérica que não possui nenhum estilo pré-definido/semântica. É equivalente a uma div, mas sem
+        o display block.</p>
+      <img src="../IMG/ex08.svg" alt="">
+      <p>Ao modificar o modo de escrita, o fluxo também é modificado.</p>
+      <img src="../IMG/ex09.svg" alt="">
+      <h2>Display inline e block</h2>
+      <p>Define como a caixa (box model) irá se comportar.</p>
+
+      <p>
+        <b>inline:</b>
+        Respeita o fluxo da escrita sem iniciar uma nova linha, não é possível definir valores de width, height, margin
+        (top/bottom) e etc. É o estilo padrão.
+      </p>
+
+      <p>
+        <b>block:</b>
+
+        Inicia uma nova linha e não permite que outros elementos sejam posicionados em sua linha. Aceita todas as
+        propriedades do box model. Estilo inicial de elementos como h1, p, div e outros.
+      </p>
+      <img src="../IMG/ex10.svg" alt="">
+      <h2> none e inline-block</h2>
+      <p>
+        <b>none:</b>
+        Remove o elemento completamente da tela.
+      </p>
+
+      <p>
+        <b>inline-block:</b>
+        O elemento continua inline, mas passa a receber as propriedades do box model.
+      </p>
+      <h2>Posicionamento</h2>
+      <p>
+        Para posicionamentos complexos, como o da imagem abaixo, utilizamos as propriedades display grid (CSS Grid Layout) e flex (Flexbox).
+      </p>
+      <img src="../IMG/posicionamento.jpg" alt="">
+      
+    </section>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

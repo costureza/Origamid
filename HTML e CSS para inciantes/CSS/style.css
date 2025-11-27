@@ -1,3 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+section{
+  margin: 2rem;
+  padding: .5rem;
+}
 header{
   display: flex;
   align-items: center;
@@ -8,12 +16,13 @@ code{
 }
 .cssexemplo{
   border: .1rem solid crimson;
-  width: 15rem;
+  width: 20rem;
   height: 5rem;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 1rem;
+  padding: 1rem;
   display: flex;
   align-items: center; 
+  background: #eee;
 }
 
 .cssexemplo b{
@@ -22,7 +31,7 @@ code{
 /* Seleciona h1 e p */
 h1,
 p {
-  color: blue;
+  color: #333;
 }
 
 /* Seleciona a dentro de p */
@@ -42,4 +51,15 @@ p a {
 }
 #logo {
   color: gold;
+}
+a{
+  color: darkcyan;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+a:visited{
+  color: #666;
+}
+img{
+  width: 600px;
 }
