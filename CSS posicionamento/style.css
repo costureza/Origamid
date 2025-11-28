@@ -1,0 +1,39 @@
+section{
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+span{
+  display: inline-block;
+  background: #ddd;
+}
+.trbl .padding{
+  padding-top: 20px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding: 20px 60px 40px 10px;
+}
+.trbl .margin{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin: 20px 40px;
+}
+
+.inlineblock h1{
+  margin: 0px;
+}
+.trbl .border{
+  border: solid black;
+  border-width: 5px 20px;
+}
+.inlineblock .top, .inlineblock .block-start{
+  writing-mode: vertical-rl;
+}
+.inlineblock .top h1{
+  margin-top: 30px;
+}
+.inlineblock .block-start h1{
+  margin-block-start: 30px;
+}
