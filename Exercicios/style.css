@@ -72,7 +72,7 @@ body {
   align-content: center;
   justify-items: end;
 }
-.vantagens,
+.content-item,
 .content{
   background: #fff;
   padding: 40px;
@@ -96,24 +96,17 @@ line-height: 1.3;
   align-items: center;
 }
 
-.detalhe{
-  width: 60px;
-  height: 4px;
-  background: #ee2211;
-  position: absolute;
-  top: 30px;
-  right: -30px;
-}
-.vantagens-itens{
+
+.content-itens{
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   padding: 20px;
 }
-.vantagens-itens p{
+.content-itens p{
   grid-column: 2;
   text-align: left;
 }
-.vantagens-itens h3{
+.content-itens h3{
   text-align:left;
 }
