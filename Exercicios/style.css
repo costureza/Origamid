@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -14,21 +15,20 @@ body {
   align-items: center;
   margin-top: 3.75rem;
   gap: 3.75rem;
+  padding: 0 20px; 
 }
-main{
+
+main {
   display: grid;
   align-items: center;
   justify-content: center;
 }
-
 
 .header {
   display: grid;
   gap: 3.75rem;
   justify-items: center;
 }
-
-
 
 .menu ul {
   display: flex;
@@ -57,8 +57,10 @@ main{
   border-radius: .25rem;
   padding: 1rem 2rem;
   display: inline-block;
+  text-align: center;
 }
-.btn:hover{
+
+.btn:hover {
   background: #900;
 }
 
@@ -66,10 +68,10 @@ main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
+  margin: 0 auto; 
 }
 
-
-.container img {
+.container .image img {
   max-width: 100%;
   display: block;
   border-radius: .25rem;
@@ -83,12 +85,13 @@ main{
   justify-items: end;
   padding: 2.5rem;
   background: #fff;
-
 }
-.content h1{
+
+.content h1 {
   font-size: 2rem;
 }
-.content::before{
+
+.content::before {
   content: "";
   width: 3.75rem;
   height: .25rem;
@@ -96,7 +99,11 @@ main{
   position: absolute;
   top: 1.87rem;
   right: -1.87rem;
+}
 
+.container .image img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .content p {
@@ -108,7 +115,8 @@ main{
   text-align: center;
   background: #fff;
   width: 100%;
-
+  padding: 40px;
+  box-sizing: border-box;
 }
 
 .subtitulo {
@@ -119,6 +127,7 @@ main{
   align-self: center;
   background: url(./img/onda.svg);
 }
+
 .content-item {
   background: #fff;
   padding: 40px;
@@ -130,7 +139,8 @@ main{
   gap: .625rem 1.25rem;
   padding: 1.25rem;
 }
-.content-itens:nth-child(odd){
+
+.content-itens:nth-child(odd) {
   background: #f7f7f7;
 }
 
@@ -139,11 +149,50 @@ main{
   text-align: left;
 }
 
-
 .content-itens h3 {
   text-align: left;
 }
 
 .content-itens:hover {
   border-left: .25rem solid #ee2211;
+}
+
+@media(max-width:1000px){
+  .container-vantagem{
+    grid-template-columns: 1fr;
+  }
+  .subtitulo{
+    text-align: center;
+  }
+  
+}
+@media(max-width:600px){
+  body{
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header{
+    gap: 30px;
+  }
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .content{
+    text-align: left;
+    justify-items: start;
+  }
+  .content::before{
+    display: none;
+  }
+  .subtitulo{
+    font-size: 3rem;
+  }
+}
+@media(max-width:400px){
+    .subtitulo{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1rem;
+  }
 }
