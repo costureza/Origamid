@@ -1,0 +1,53 @@
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+
+label{
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+input{
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 1px solid #cc990d;
+  border-radius: 4px;
+}
+
+button{
+  display: block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: #443202;
+  border: none;
+  border-radius: 4px;
+  background: #cc990d;
+  cursor: pointer;
+}
+.checkbox, .radio{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox label, .radio label{
+  margin: 0px;
+}
+.checkbox input, .radio input{
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+select{
+  font-size: 1.2rem;
+  padding: 10px;
+}
+textarea{
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

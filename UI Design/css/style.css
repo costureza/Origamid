@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url(./header.css);
+@import url(./global.css);
+@import url(./intro.css);
+@import url(./projetos.css);
+@import url(./formacao.css);
+@import url(./footer.css);
+
+:root{
+  --base1: #F5F5F5;
+  --base2: #F0F0F0;
+  --base3: #CCCCCC;
+  --black: #141414;
+  --black2: #292929;
+  --vermelho: #CB0002;
+  --vermelhoclaro1: #FCE7E7;
+  --vermelhoclaro2: #E98C8E;
+  --vermelhoclaro3: #DA4043;
+  --vermelhoclaro4: #D32022;
+  --vermelhob1: #B10002;  
+  --vermelhob2: #310000;
+  --gradiente: linear-gradient(var(--vermelhoclaro4), var(--vermelho));
+}

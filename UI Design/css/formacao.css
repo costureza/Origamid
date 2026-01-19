@@ -1,0 +1,139 @@
+.formacao{
+  background: var(--black);  
+} 
+
+.formacao-container{
+  max-width: 1200px;
+  padding: 7.5rem 1.25rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6.25rem;
+  position: relative;
+}
+.formacao-container::after{
+  content: '';
+  display: block;
+  width: 8.125rem;
+  height: 6.25rem;
+  background: url('../img/detalhe.svg') no-repeat center;
+  position: absolute;
+  bottom: -3.125rem;
+  left: 1.25rem;
+}
+.formacao .title{
+  max-width: 5ch;
+}
+.formacao-texto{
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 3.75rem;
+  color: var(--base1);
+}
+.formacao-texto strong{
+  color: #ffff;
+}
+.formacao-lista{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 3.75rem;
+}
+.curso{
+  flex: 1;
+  background: var(--black2);
+  padding: 1.25rem;
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+}
+.curso-tipo{
+  font-size: .875rem;
+  text-transform: uppercase;
+  color: var(--vermelhoclaro1);
+  margin-bottom: .625rem;
+}
+
+.curso-formacao{
+  flex: 1;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  position: relative;
+  color: var(--vermelhoclaro2);
+}
+.curso-formacao::before{
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 1.25rem;
+  background: var(--gradiente);
+  position: absolute;  
+  left: -1.5rem;
+}
+.formacao-instituicao{
+  font-size: 1.25rem;
+  color: var(--vermelhoclaro1);
+}
+.cursos-extras{
+  margin-bottom: 3.75rem;
+
+}
+.cursos-extras h3{
+  font-size: .875rem;
+  line-height: 1.4;
+  color: var(--base3);
+  text-transform: uppercase;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+
+.cursos-extras h3::before{
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -2.25rem;
+  top: -.25rem;
+}
+
+.course::before{
+  background: url("../img/book.svg" )no-repeat center center;
+}
+
+.idioma::before{
+  background: url("../img/idioma.svg" )no-repeat center center;
+}
+
+.cursos-extras li{
+  font-size: 1.25rem;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  color: var(--vermelhoclaro1);
+  display: flex;  
+}
+.cursos-extras span{
+  color: var(--base1);
+  font-weight: 200;
+}
+.lista-curso li{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width: 800px){
+  .formacao-container{
+    grid-template-columns: 1fr;
+    padding: 3.75rem 1.25rem ;
+    gap: 2.5rem;
+  }
+  .formacao-texto{
+    font-size: 1.25rem;
+  }
+  .cursos-extras h3::before{
+    position: initial;
+    margin-bottom: .625rem;
+  }
+}

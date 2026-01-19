@@ -1,0 +1,70 @@
+.intro {
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 4.5rem;
+  line-height: 1.25;
+  font-family: "Abril Fatface", serif;
+  color: var(--vermelho);
+  margin-bottom: 1.875rem;
+}
+
+.foto {
+  position: relative;
+}
+
+.foto::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  background: url('../img/detalhe.svg') no-repeat center;
+  background-size: contain;
+  top: -24px;
+  left: -44px;
+  z-index: 2;
+}
+
+.foto img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  display: block;
+}
+
+.intro p {
+  font-size: 1.5rem;
+}
+
+@media(max-width: 1000px) {
+  .intro h1 {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 500px) {
+  .foto::before {
+    display: none;
+  }
+}
+
+@media(max-width: 400px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .foto img {
+    display: none;
+  }
+}
