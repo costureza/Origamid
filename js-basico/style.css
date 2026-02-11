@@ -7,9 +7,19 @@
   color: aliceblue;
   background: #333;
 }
+body{
+  width: 2000px;
+}
 .ativo{
   margin-top: 200px;
 }
 a:hover{
   color: aqua;
+}
+#circulo{
+  width: 16px;
+  height: 16px;
+  background: #999;
+  border-radius: 50%;
+  position: absolute;
 }
